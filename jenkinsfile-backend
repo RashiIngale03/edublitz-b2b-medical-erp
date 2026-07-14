@@ -24,11 +24,22 @@ pipeline {
             post{
                 success{
                     archiveArtifacts artifacts: 'user-service/target/*.jar', fingerprint: true
+                }
+            }
+        }
+        stage('SonarQubeAnalysis - user service'){
+            steps{
+                withSonarQubeEnv('sonar'){
+                    dir('user-service'){
+                        sh 'mvn sonar:sonar'
                     }
                 }
             }
         }
 
     }
+        
+
+}
   
 
