@@ -127,9 +127,9 @@ pipeline {
                 sh '''
                 kubectl create secret generic app-secrets \
                   -n med-erp \
-                  --from-literal=MONGODB_URI_USER="mongodb+srv://rashi:rashi@123@project-cluster.uzvoecg.mongodb.net/users_db?appName=project-cluster" \
-                  --from-literal=MONGODB_URI_PRODUCT="mongodb+srv://rashi:rashi@123@project-cluster.uzvoecg.mongodb.net/products_db?appName=project-cluster" \
-                  --from-literal=MONGODB_URI_ORDER="mongodb+srv://rashi:rashi@123@project-cluster.uzvoecg.mongodb.net/orders_db?appName=project-cluster" \
+                  --from-literal=MONGODB_URI_USER="mongodb+srv://rashi:rashi%40123@project-cluster.uzvoecg.mongodb.net/users_db?appName=project-cluster" \
+                  --from-literal=MONGODB_URI_PRODUCT="mongodb+srv://rashi:rashi%40123@project-cluster.uzvoecg.mongodb.net/products_db?appName=project-cluster" \
+                  --from-literal=MONGODB_URI_ORDER="mongodb+srv://rashi:rashi%40123@project-cluster.uzvoecg.mongodb.net/orders_db?appName=project-cluster" \
                   --from-literal=JWT_SECRET="404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970" \
                   --dry-run=client -o yaml | kubectl apply -f -
                 '''
