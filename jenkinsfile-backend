@@ -126,7 +126,7 @@ pipeline {
                 kubectl get ingress -n med-erp
 
                 kubectl get pods
-                watch kubectl get pods
+                watch kubectl get pods  
                 '''
             }
         }
