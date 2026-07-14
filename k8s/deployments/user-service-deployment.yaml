@@ -43,7 +43,7 @@ spec:
                 secretKeyRef:
                   name: app-secrets
                   key: MONGODB_URI_USER
-            - name: JWT_SECRETlatest
+            - name: JWT_SECRET
               valueFrom:
                 secretKeyRef:
                   name: app-secrets
