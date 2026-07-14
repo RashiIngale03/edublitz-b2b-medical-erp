@@ -20,14 +20,15 @@ pipeline {
                 dir('user-service'){
                     sh 'mvn clean package -DskipTests'
                 }
-                post{
-                    success{
-                        archiveArticats artifacts: 'user-service/target/*.jar', fingerprint: true
+            }
+            post{
+                success{
+                    archiveArticats artifacts: 'user-service/target/*.jar', fingerprint: true
                     }
                 }
             }
         }
 
     }
-}   
+  
 
