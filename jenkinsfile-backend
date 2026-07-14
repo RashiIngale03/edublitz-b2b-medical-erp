@@ -124,6 +124,9 @@ pipeline {
                 kubectl get svc -n med-erp
                 kubectl get hpa -n med-erp
                 kubectl get ingress -n med-erp
+
+                kubectl get pods
+                watch kubectl get pods
                 '''
             }
         }
