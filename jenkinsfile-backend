@@ -128,7 +128,7 @@ pipeline {
                 kubectl rollout restart deployment user-service -n med-erp
                 kubectl rollout status deployment/user-service -n med-erp 
                 kubectl get pods -n med-erp
-                watch kubectl get pods  -n med-erp
+                
                 '''
             }
         }
