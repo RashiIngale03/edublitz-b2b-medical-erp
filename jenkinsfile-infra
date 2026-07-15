@@ -62,7 +62,7 @@ pipeline {
                 https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/main/docs/install/iam_policy.json
 
                 aws iam create-policy \
-                  --policy-name AWSLoadBalancerControllerIAMPolicy-Rashi \
+                  --policy-name AWSLoadBalancerControllerIAMPolicy-Raashi \
                   --policy-document file://iam_policy.json || true
                 '''
             }
@@ -76,7 +76,7 @@ pipeline {
                   --namespace kube-system \
                   --name aws-load-balancer-controller \
                   --role-name AWSLoadBalancerControllerIAMRole-Raashi \
-                  --attach-policy-arn arn:aws:iam::318244486837:policy/AWSLoadBalancerControllerIAMPolicy-Rashi \
+                  --attach-policy-arn arn:aws:iam::318244486837:policy/AWSLoadBalancerControllerIAMPolicy-Raashi \
                   --approve \
                   --region ap-south-1 || true
                 '''
