@@ -75,7 +75,7 @@ pipeline {
                   --cluster my-eks-cluster1 \
                   --namespace kube-system \
                   --name aws-load-balancer-controller \
-                  --role-name AWSLoadBalancerControllerIAMRole-Rashi \
+                  --role-name AWSLoadBalancerControllerIAMRole-Raashi \
                   --attach-policy-arn arn:aws:iam::318244486837:policy/AWSLoadBalancerControllerIAMPolicy-Rashi \
                   --approve \
                   --region ap-south-1 || true
